@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser")
 const { errorHandler } = require("./middlewares/errorHandler")
 const homeRoute = require("./routes/homeRoute")
 const userRoute = require("./routes/userRoute")
+const productRoutes = require("./routes/productRoutes")
 require("./config/conn").connect()
 const app = express()
 const cloudinary = require("cloudinary").v2
@@ -32,6 +33,7 @@ app.use(morgan("tiny"))
 //routes
 app.use("/", homeRoute)
 app.use("/", userRoute)
+app.use("/", productRoutes)
 
 // error handler middleware
 app.use(errorHandler)

@@ -10,9 +10,10 @@ exports.errorHandler = (error, req, res, next) => {
             code: 400,
         })
     } else if (error.display === undefined) {
-        res.status(400).json({
+        res.status(500).json({
             status: "error",
             message: error.message,
+            code: 500,
         })
     } else {
         error.display(req, res)

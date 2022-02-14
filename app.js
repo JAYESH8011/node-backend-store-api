@@ -6,6 +6,7 @@ const { errorHandler } = require("./middlewares/errorHandler")
 const homeRoute = require("./routes/homeRoute")
 const userRoute = require("./routes/userRoute")
 const productRoutes = require("./routes/productRoutes")
+const orderRoute = require("./routes/orderRoute")
 require("./config/conn").connect()
 const app = express()
 const cloudinary = require("cloudinary").v2
@@ -34,6 +35,7 @@ app.use(morgan("tiny"))
 app.use("/", homeRoute)
 app.use("/", userRoute)
 app.use("/", productRoutes)
+app.use("/", orderRoute)
 
 // error handler middleware
 app.use(errorHandler)

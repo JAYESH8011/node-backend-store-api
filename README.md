@@ -2,7 +2,7 @@
 
 This is a backend rest API for the (E-commerce) T-shirt store. It allows users to signUp/logIn (authentication) and place orders and get orders. It also has separate admin routes to create update and delete products from the database
 
-It uploads the photo of the user and products to the cloud and adds a reference to the database. This API can also send the forgot password request to the user e-mail address as well as other alerts through e-mail
+It also uploads the photo of the user and products to the cloud and adds a reference to the database. This API can also send the forgot password request to the user e-mail address as well as other alerts through e-mail
 
 ## Environment Variables
 
